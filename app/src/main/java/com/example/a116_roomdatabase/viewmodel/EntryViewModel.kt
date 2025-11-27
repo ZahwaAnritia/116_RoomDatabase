@@ -3,7 +3,22 @@ package com.example.a116_roomdatabase.viewmodel
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.lifecycle.ViewModel
+import com.example.a116_roomdatabase.repositori.RepositoriSiswa
+import com.example.a116_roomdatabase.room.Siswa
 
+
+data class UIStateSiswa(
+    val detailSiswa: DetailSiswa = DetailSiswa(),
+    val isEntryValid: Boolean = false
+)
+
+data class DetailSiswa(
+    val id: Int = 0,
+    val nama: String = "",
+    val alamat: String = "",
+    val telpon: String = "",
+)
 
 fun DetailSiswa.toSiswa(): Siswa = Siswa(
     id = id,
