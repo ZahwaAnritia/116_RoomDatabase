@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <style name="Theme._116_RoomDatabase" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.A116RoomDatabase" parent="android:Theme.Material.Light.NoActionBar" />
 </resources>
