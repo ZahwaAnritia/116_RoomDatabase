@@ -18,6 +18,16 @@ abstract class DatabaseSiswa : RoomDatabase() {
         @Volatile
         private var Instance: DatabaseSiswa? = null
 
-
+        fun generate(context: Context): DatabaseSiswa {
+            return Instance ?: synchronized(this) {
+                val instance = Room.databaseBuilder(
+                    context.applicationContext,
+                    DatabaseSiswa::class.java,
+                    "siswa_database"
+                ).build()
+                Instance = instance
+                instance
+            }
+        }
     }
 }
